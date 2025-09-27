@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussions - AlumHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css"> <link rel="stylesheet" href="discussion-page.css"> </head>
+<body>
+    <div class="portal-wrapper">
+        <header class="main-navbar">
+            <div class="navbar-left">
+                <button class="menu-toggle-btn"><i class="fas fa-bars"></i></button>
+                <div class="nav-brand">AlumHub</div>
+                <nav class="main-nav-links">
+                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="alumni-page.html" class="nav-link">Alumni</a>
+                    <a href="private-messaging.html" class="nav-link">Messaging</a>
+                    <a href="job-board.html" class="nav-link">Job Board</a>
+                    <a href="discussion-page.html" class="nav-link active">Discussions</a> <a href="more.html" class="nav-link">More</a>
+                </nav>
+            </div>
+            <div class="navbar-right">
+                <div class="search-container">
+                    <input type="text" placeholder="Global Search..." class="global-search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <a href="#" class="icon-button notification-bell"><i class="fas fa-bell"></i></a> 
+                <a href="student-profile.html" id="userProfileLink" class="icon-button profile-icon-link">
+                    <img src="https://via.placeholder.com/30/3f51b5/ffffff?text=JD" alt="User Profile" class="navbar-profile-img">
+                </a>
+            </div>
+        </header>
+
+        <main class="discussion-main-content">
+            <div class="discussion-header">
+                <h1 class="page-title">Community Discussions</h1>
+                <button class="create-topic-btn">
+                    <i class="fas fa-plus"></i> New Topic
+                </button>
+            </div>
+
+            <div class="discussion-grid">
+                <aside class="discussion-sidebar">
+                    <div class="sidebar-block">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">Career Advice</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Alumni News</a></li>
+                            <li><a href="#">Tech & Innovation</a></li>
+                            <li><a href="#">Mentorship</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-block">
+                        <h3>Popular Topics</h3>
+                        <ul class="popular-topics-list">
+                            <li><a href="#">Best practices for job interviews</a></li>
+                            <li><a href="#">Upcoming alumni meetup in NYC</a></li>
+                            <li><a href="#">Seeking advice on starting a startup</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <section class="discussion-list">
+                    <a href="discussion-topic.html" class="discussion-card">
+                        <div class="topic-info">
+                            <h2 class="topic-title">Strategies for career change in your 30s?</h2>
+                            <p class="topic-meta">Posted by <span class="author">Jane Doe</span> on Oct 26, 2023</p>
+                            <p class="topic-snippet">I'm looking to pivot my career into a completely different field. Any alumni here who have successfully made a significant career change later in their professional life? Looking for advice on networking, skill acquisition, and overcoming challenges.</p>
+                        </div>
+                        <div class="topic-stats">
+                            <span class="replies"><i class="fas fa-comments"></i> 12 replies</span>
+                            <span class="views"><i class="fas fa-eye"></i> 345 views</span>
+                        </div>
+                    </a>
+
+                    <a href="discussion-topic.html" class="discussion-card">
+                        <div class="topic-info">
+                            <h2 class="topic-title">Alum Spotlight: Share your success stories!</h2>
+                            <p class="topic-meta">Posted by <span class="author">Admin</span> on Oct 25, 2023</p>
+                            <p class="topic-snippet">Let's celebrate our alumni! Share your recent achievements, career milestones, or interesting projects you've been working on. Inspire others and connect!</p>
+                        </div>
+                        <div class="topic-stats">
+                            <span class="replies"><i class="fas fa-comments"></i> 28 replies</span>
+                            <span class="views"><i class="fas fa-eye"></i> 789 views</span>
+                        </div>
+                    </a>
+
+                    <a href="discussion-topic.html" class="discussion-card">
+                        <div class="topic-info">
+                            <h2 class="topic-title">Mentorship program interest check</h2>
+                            <p class="topic-meta">Posted by <span class="author">John Smith</span> on Oct 24, 2023</p>
+                            <p class="topic-snippet">Considering launching a formal mentorship program for recent graduates. Would alumni be interested in being mentors? What features would you like to see?</p>
+                        </div>
+                        <div class="topic-stats">
+                            <span class="replies"><i class="fas fa-comments"></i> 18 replies</span>
+                            <span class="views"><i class="fas fa-eye"></i> 512 views</span>
+                        </div>
+                    </a>
+
+                    <div class="pagination">
+                        <a href="#" class="page-link disabled"><i class="fas fa-chevron-left"></i> Previous</a>
+                        <a href="#" class="page-link active">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link">3</a>
+                        <a href="#" class="page-link">Next <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
