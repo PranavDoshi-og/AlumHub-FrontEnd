@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="student-profile.css"> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="custom-profile-wrapper">
+        <div class="profile-grid">
+            <div class="main-profile-column">
+
+                <section class="profile-intro-card student-intro-card"> <img src="student-profile-pic.jpg" alt="Student Profile Picture" class="intro-profile-pic">
+                    <div class="intro-text-details">
+                        <h1 class="intro-name">Student Name</h1>
+                        <p class="intro-tagline" contenteditable="true">Computer Science Student at [University Name]</p>
+                        <p class="intro-location"><i class="fas fa-map-marker-alt"></i> City, Country · <a href="#">Contact Info</a></p>
+                    </div>
+                    <div class="intro-actions">
+                        <button class="action-btn-primary">Message</button>
+                        <button class="action-btn-tertiary">Edit Profile</button>
+                    </div>
+                </section>
+
+                <section class="profile-section-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Academic Details</h2>
+                        <i class="fas fa-edit card-action-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="profile-field-group">
+                            <label for="studentPhone">Phone</label>
+                            <input type="tel" id="studentPhone" value="+1 987-654-3210" placeholder="Enter phone number" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="studentRollNumber">Roll Number (Optional)</label>
+                            <input type="text" id="studentRollNumber" value="S2023001" placeholder="Enter roll number" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="studentBranch">Branch</label>
+                            <input type="text" id="studentBranch" value="Computer Engineering" placeholder="Enter branch" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="studentMajors">Majors</label>
+                            <input type="text" id="studentMajors" value="Software Development, AI" placeholder="e.g., Software Development, AI" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="studentEnrollmentYear">Enrollment Year</label>
+                            <input type="text" id="studentEnrollmentYear" value="2023" placeholder="Enter enrollment year" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="studentCurrentYear">Current Year of Study</label>
+                            <input type="text" id="studentCurrentYear" value="1st Year" placeholder="e.g., 1st Year, Sophomore" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="studentGPA">GPA</label>
+                            <input type="text" id="studentGPA" value="3.8 / 4.0" placeholder="e.g., 3.8 / 4.0" readonly>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="profile-section-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Courses Taken</h2>
+                        <div class="card-header-actions">
+                            <i class="fas fa-plus card-action-icon"></i>
+                            <i class="fas fa-edit card-action-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="generic-list student-list-item"> <li><i class="fas fa-book-open"></i> Data Structures and Algorithms</li>
+                            <li><i class="fas fa-book-open"></i> Introduction to Web Development</li>
+                            <li><i class="fas fa-book-open"></i> Calculus I</li>
+                            <li><i class="fas fa-book-open"></i> Object-Oriented Programming</li>
+                        </ul>
+                        <a href="#" class="view-more-link">Add New Course <i class="fas fa-plus-circle"></i></a>
+                    </div>
+                </section>
+
+                <section class="profile-section-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Internships</h2>
+                        <div class="card-header-actions">
+                            <i class="fas fa-plus card-action-icon"></i>
+                            <i class="fas fa-edit card-action-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="experience-item">
+                            <img src="internship-logo-1.png" alt="Internship Company Logo" class="org-logo-sm">
+                            <div class="experience-details">
+                                <h3 class="job-title" contenteditable="true">Software Engineering Intern</h3>
+                                <p class="org-name" contenteditable="true">Innovate Solutions</p>
+                                <p class="job-duration" contenteditable="true">Summer 2024 · 3 months</p>
+                                <p class="job-location" contenteditable="true">Remote</p>
+                            </div>
+                        </div>
+                        <div class="experience-item">
+                            <img src="internship-logo-2.png" alt="Internship Company Logo" class="org-logo-sm">
+                            <div class="experience-details">
+                                <h3 class="job-title" contenteditable="true">Data Analytics Intern</h3>
+                                <p class="org-name" contenteditable="true">Data Insights Co.</p>
+                                <p class="job-duration" contenteditable="true">Winter 2023 · 2 months</p>
+                                <p class="job-location" contenteditable="true">City, Country</p>
+                            </div>
+                        </div>
+                        <a href="#" class="view-more-link">Add New Internship <i class="fas fa-plus-circle"></i></a>
+                    </div>
+                </section>
+
+                <section class="profile-section-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Skills</h2>
+                        <div class="card-header-actions">
+                            <i class="fas fa-plus card-action-icon"></i>
+                            <i class="fas fa-edit card-action-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-body tag-list"> <span class="tag-item student-tag-item">Python</span> <span class="tag-item student-tag-item">JavaScript</span>
+                        <span class="tag-item student-tag-item">SQL</span>
+                        <span class="tag-item student-tag-item">HTML/CSS</span>
+                        <span class="tag-item student-tag-item">Machine Learning Basics</span>
+                        <span class="tag-item student-tag-item">Teamwork</span>
+                        <span class="tag-item student-tag-item">Problem Solving</span>
+                        <a href="#" class="view-more-link">Add/Manage Skills <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </section>
+
+                <section class="profile-section-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Clubs & Societies</h2>
+                        <div class="card-header-actions">
+                            <i class="fas fa-plus card-action-icon"></i>
+                            <i class="fas fa-edit card-action-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="generic-list student-list-item"> <li><i class="fas fa-users"></i> University Robotics Club - Member</li>
+                            <li><i class="fas fa-users"></i> Code & Coffee Society - Treasurer</li>
+                            <li><i class="fas fa-users"></i> Student Volunteer Network</li>
+                        </ul>
+                        <a href="#" class="view-more-link">Add New Club/Society <i class="fas fa-plus-circle"></i></a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

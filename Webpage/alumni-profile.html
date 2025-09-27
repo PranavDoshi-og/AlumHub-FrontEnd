@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Profile</title>
+    <link rel="stylesheet" href="alumni-profile.css"> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="custom-profile-wrapper">
+        <div class="profile-grid">
+            <div class="main-profile-column">
+
+                <section class="profile-intro-card alumni-intro-card"> <img src="alumni-profile-pic.jpg" alt="Alumni Profile Picture" class="intro-profile-pic">
+                    <div class="intro-text-details">
+                        <h1 class="intro-name">Alumni Name</h1>
+                        <p class="intro-tagline" contenteditable="true">Senior Software Engineer at TechCorp</p>
+                        <p class="intro-location"><i class="fas fa-map-marker-alt"></i> Location, Country · <a href="#">Contact Info</a></p>
+                    </div>
+                    <div class="intro-actions">
+                        <button class="action-btn-primary">Connect</button>
+                        <button class="action-btn-secondary">Message</button>
+                        <button class="action-btn-tertiary">Edit Profile</button>
+                    </div>
+                </section>
+
+                <section class="profile-section-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Personal Details</h2>
+                        <i class="fas fa-edit card-action-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="profile-field-group">
+                            <label for="alumniPhone">Phone</label>
+                            <input type="tel" id="alumniPhone" value="+1 123-456-7890" placeholder="Enter phone number" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="alumniRollNumber">Roll Number (Optional)</label>
+                            <input type="text" id="alumniRollNumber" value="12345" placeholder="Enter roll number" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="alumniBranch">Branch</label>
+                            <input type="text" id="alumniBranch" value="Computer Science" placeholder="Enter branch" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="alumniGraduationYear">Graduation Year</label>
+                            <input type="text" id="alumniGraduationYear" value="2018" placeholder="Enter graduation year" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="alumniLinkedIn">LinkedIn Profile</label>
+                            <input type="url" id="alumniLinkedIn" value="https://www.linkedin.com/in/alumni-profile" placeholder="Enter LinkedIn URL" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label>Willing to Mentor</label>
+                            <div class="custom-checkbox-group"> <input type="checkbox" id="willingToMentor" checked disabled>
+                                <label for="willingToMentor">Yes, I am willing to mentor students.</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="profile-section-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Professional Experience</h2>
+                        <div class="card-header-actions">
+                            <i class="fas fa-plus card-action-icon"></i>
+                            <i class="fas fa-edit card-action-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="profile-field-group">
+                            <label for="alumniCompany">Current Company</label>
+                            <input type="text" id="alumniCompany" value="Tech Innovations Inc." placeholder="Enter current company" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="alumniJobTitle">Job Title</label>
+                            <input type="text" id="alumniJobTitle" value="Senior Software Engineer" placeholder="Enter job title" readonly>
+                        </div>
+                        <div class="profile-field-group">
+                            <label for="alumniJobLocation">Job Location</label>
+                            <input type="text" id="alumniJobLocation" value="San Francisco, USA" placeholder="Enter job location" readonly>
+                        </div>
+                        <div class="experience-item">
+                            <img src="techcorp-logo.png" alt="TechCorp Logo" class="org-logo-sm">
+                            <div class="experience-details">
+                                <h3 class="job-title" contenteditable="true">Senior Software Engineer</h3>
+                                <p class="org-name" contenteditable="true">TechCorp</p>
+                                <p class="job-duration" contenteditable="true">Jan 2021 – Present · 2 yrs 8 mos</p>
+                                <p class="job-location" contenteditable="true">New York, USA · Full-time</p>
+                            </div>
+                        </div>
+                        <div class="experience-item">
+                            <img src="dataspark-logo.png" alt="DataSpark Logo" class="org-logo-sm">
+                            <div class="experience-details">
+                                <h3 class="job-title" contenteditable="true">Software Developer</h3>
+                                <p class="org-name" contenteditable="true">DataSpark Solutions</p>
+                                <p class="job-duration" contenteditable="true">Jun 2018 – Dec 2020 · 2 yrs 7 mos</p>
+                                <p class="job-location" contenteditable="true">Boston, USA · Full-time</p>
+                            </div>
+                        </div>
+                        <a href="#" class="view-more-link">Show all experience <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </section>
+
+                <section class="profile-section-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Achievements</h2>
+                        <i class="fas fa-plus card-action-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <ul class="generic-list alumni-achievements-list"> <li><i class="fas fa-award"></i> Led successful migration project, reducing server costs by 15%.</li>
+                            <li><i class="fas fa-award"></i> Mentored junior developers, improving team code quality by 20%.</li>
+                            <li><i class="fas fa-award"></i> Awarded 'Innovator of the Year' for contributing to a new product feature.</li>
+                        </ul>
+                        <a href="#" class="view-more-link">Add New Achievement <i class="fas fa-plus-circle"></i></a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

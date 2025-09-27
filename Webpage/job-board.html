@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlumHub - Job Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="job-board.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="portal-wrapper">
+        <header class="main-navbar">
+            <div class="navbar-left">
+                <button class="menu-toggle-btn"><i class="fas fa-bars"></i></button>
+                <div class="nav-brand">AlumHub</div>
+                <nav class="main-nav-links">
+                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="alumni-page.html" class="nav-link">Alumni</a>
+                    <a href="private-messaging.html" class="nav-link">Messaging</a>
+                    <a href="job-board.html" class="nav-link active">Job Board</a> <a href="more.html" class="nav-link">More</a>
+                </nav>
+            </div>
+            <div class="navbar-right">
+                <div class="search-container">
+                    <input type="text" placeholder="Global Search..." class="global-search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <a href="profile.html" class="icon-button notification-bell"><i class="fas fa-bell"></i></a> 
+                <a href="#" id="userProfileLink" class="icon-button profile-icon-link">
+                    <img src="https://via.placeholder.com/30/3f51b5/ffffff?text=JD" alt="User Profile" class="navbar-profile-img">
+                </a>
+            </div>
+        </header>
+
+        <main class="job-board-layout">
+            <div class="job-board-header-section">
+                <h1 class="page-title"><i class="fas fa-briefcase"></i> Job Board</h1>
+                <div class="header-actions">
+                    <span class="job-count-summary">Showing <span>42</span> Active Jobs & Internships</span>
+                    <button class="control-btn post-job-btn"><i class="fas fa-plus-circle"></i> Post a Job</button>
+                </div>
+            </div>
+
+            <div class="job-filters-section">
+                <div class="quick-filters">
+                    <button class="filter-tag active" data-filter="all">All</button>
+                    <button class="filter-tag" data-filter="internship">Internship</button>
+                    <button class="filter-tag" data-filter="fulltime">Full-Time</button>
+                    <button class="filter-tag" data-filter="parttime">Part-Time</button>
+                    <button class="filter-tag" data-filter="remote">Remote</button>
+                    <button class="filter-tag" data-filter="oncampus">On-Campus</button>
+                </div>
+                <div class="search-and-advanced-filters">
+                    <div class="job-search-container">
+                        <input type="text" placeholder="Search by title, company, keyword..." class="job-search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <button class="control-btn advanced-filter-btn"><i class="fas fa-sliders-h"></i> Advanced Filters</button>
+                </div>
+            </div>
+
+            <div class="job-listings-grid">
+                <div class="job-card" data-job-type="internship">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/60x60/673ab7/ffffff?text=TI" alt="Company Logo" class="company-logo">
+                        <div class="job-overview">
+                            <h3 class="job-title">Software Development Intern</h3>
+                            <p class="company-name">Tech Innovators LLC</p>
+                        </div>
+                        <span class="job-type-label internship">Internship</span>
+                    </div>
+                    <div class="job-details-summary">
+                        <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                        <p><i class="fas fa-calendar-alt"></i> 3 Months</p>
+                        <p><i class="fas fa-briefcase"></i> Entry Level</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="deadline">Apply by: <strong class="text-danger">Dec 15th</strong></span>
+                        <button class="action-btn apply-btn">Apply <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="job-card" data-job-type="fulltime">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/60x60/f44336/ffffff?text=GA" alt="Company Logo" class="company-logo">
+                        <div class="job-overview">
+                            <h3 class="job-title">Junior Data Scientist</h3>
+                            <p class="company-name">Global Analytics Corp</p>
+                        </div>
+                        <span class="job-type-label fulltime">Full-Time</span>
+                    </div>
+                    <div class="job-details-summary">
+                        <p><i class="fas fa-map-marker-alt"></i> Bangalore, IN</p>
+                        <p><i class="fas fa-money-bill-wave"></i> Competitive</p>
+                        <p><i class="fas fa-graduation-cap"></i> New Grad</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="deadline">Apply by: <strong class="text-success">Nov 30th</strong></span>
+                        <button class="action-btn apply-btn">Apply <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="job-card" data-job-type="internship" data-location="remote">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/60x60/009688/ffffff?text=CC" alt="Company Logo" class="company-logo">
+                        <div class="job-overview">
+                            <h3 class="job-title">Content Marketing Intern</h3>
+                            <p class="company-name">Creative Connect Agency</p>
+                        </div>
+                        <span class="job-type-label internship">Internship</span>
+                    </div>
+                    <div class="job-details-summary">
+                        <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                        <p><i class="fas fa-calendar-alt"></i> 6 Months</p>
+                        <p><i class="fas fa-language"></i> English</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="deadline">Apply by: <strong class="text-danger">Dec 20th</strong></span>
+                        <button class="action-btn apply-btn">Apply <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="job-card" data-job-type="parttime" data-location="oncampus">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/60x60/2196f3/ffffff?text=Univ" alt="Company Logo" class="company-logo">
+                        <div class="job-overview">
+                            <h3 class="job-title">Library Assistant</h3>
+                            <p class="company-name">AlumHub University</p>
+                        </div>
+                        <span class="job-type-label parttime">Part-Time</span>
+                    </div>
+                    <div class="job-details-summary">
+                        <p><i class="fas fa-map-marker-alt"></i> On-Campus</p>
+                        <p><i class="fas fa-hourglass-start"></i> Flexible Hrs</p>
+                        <p><i class="fas fa-user-friends"></i> Student Role</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="deadline">Apply by: <strong class="text-success">Jan 10th</strong></span>
+                        <button class="action-btn apply-btn">Apply <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                 <div class="job-card" data-job-type="fulltime">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/60x60/8bc34a/ffffff?text=Inno" alt="Company Logo" class="company-logo">
+                        <div class="job-overview">
+                            <h3 class="job-title">Senior UX Designer</h3>
+                            <p class="company-name">Innovation Hub Inc.</p>
+                        </div>
+                        <span class="job-type-label fulltime">Full-Time</span>
+                    </div>
+                    <div class="job-details-summary">
+                        <p><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+                        <p><i class="fas fa-briefcase"></i> 5+ Years Exp</p>
+                        <p><i class="fas fa-laptop-code"></i> Design Team</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="deadline">Apply by: <strong class="text-danger">Dec 5th</strong></span>
+                        <button class="action-btn apply-btn">Apply <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="job-card" data-job-type="internship">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/60x60/ff9800/ffffff?text=Mk" alt="Company Logo" class="company-logo">
+                        <div class="job-overview">
+                            <h3 class="job-title">Marketing Strategy Intern</h3>
+                            <p class="company-name">Dynamic Marketing Solutions</p>
+                        </div>
+                        <span class="job-type-label internship">Internship</span>
+                    </div>
+                    <div class="job-details-summary">
+                        <p><i class="fas fa-map-marker-alt"></i> Hybrid</p>
+                        <p><i class="fas fa-calendar-alt"></i> 4 Months</p>
+                        <p><i class="fas fa-chart-line"></i> Business Dev</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="deadline">Apply by: <strong class="text-success">Jan 1st</strong></span>
+                        <button class="action-btn apply-btn">Apply <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Basic JavaScript for filter functionality (can be expanded)
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-tag');
+            const jobCards = document.querySelectorAll('.job-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filter = button.dataset.filter;
+
+                    jobCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.jobType === filter || card.dataset.location === filter) {
+                            card.style.display = 'flex'; // Show card
+                        } else {
+                            card.style.display = 'none'; // Hide card
+                        }
+                    });
+                });
+            });
+
+            // Implement search functionality
+            const searchInput = document.querySelector('.job-search-input');
+            searchInput.addEventListener('keyup', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                jobCards.forEach(card => {
+                    const title = card.querySelector('.job-title').textContent.toLowerCase();
+                    const company = card.querySelector('.company-name').textContent.toLowerCase();
+                    const type = card.dataset.jobType.toLowerCase(); // Get job type from data attribute
+
+                    if (title.includes(searchTerm) || company.includes(searchTerm) || type.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+
+            // Add smooth scroll for filters/search for better UX (optional)
+            // document.querySelector('.job-filters-section').addEventListener('click', (e) => {
+            //     if (e.target.classList.contains('filter-tag') || e.target.classList.contains('advanced-filter-btn')) {
+            //         document.querySelector('.job-listings-grid').scrollIntoView({ behavior: 'smooth' });
+            //     }
+            // });
+
+        });
+    </script>
+</body>
+</html>

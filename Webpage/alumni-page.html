@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlumHub - Alumni Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="alumni-page.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="portal-wrapper">
+        <header class="main-navbar">
+            <div class="navbar-left">
+                <button class="menu-toggle-btn"><i class="fas fa-bars"></i></button>
+                <div class="nav-brand">AlumHub</div>
+                <nav class="main-nav-links">
+                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="alumni-page.html" class="nav-link active">Alumni</a> 
+                    <a href="private-messaging.html" class="nav-link">Messaging</a>
+                </nav>
+            </div>
+            <div class="navbar-right">
+                <div class="search-container">
+                    <input type="text" placeholder="Global Search..." class="global-search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <a href="profile.html" class="icon-button notification-bell"><i class="fas fa-bell"></i></a> 
+                <a href="#" id="userProfileLink" class="icon-button profile-icon-link">
+                    <img src="https://avatar.iran.liara.run/public/36" alt="User Profile" class="navbar-profile-img">
+                </a>
+            </div>
+        </header>
+
+        <main class="alumni-page-layout">
+            <section class="alumni-list-container">
+                <div class="alumni-controls">
+                    <div class="filter-sort-group">
+                        <button class="control-btn filter-sort-btn"><i class="fas fa-filter"></i> Filter</button>
+                        <button class="control-btn filter-sort-btn"><i class="fas fa-sort"></i> Sort</button>
+                    </div>
+                    <div class="search-alumni-container">
+                        <input type="text" placeholder="Search Alumni..." class="alumni-search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+
+                <div class="alumni-table-wrapper card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sr</th>
+                                <th>Name</th>
+                                <th>Branch</th>
+                                <th>Working</th>
+                                <th>Batch</th>
+                                <th>Company</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="alumni-row active">
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>Computer Science</td>
+                                <td>Yes</td>
+                                <td>2018</td>
+                                <td>Tech Innovators Inc.</td>
+                                <td>Full-time</td>
+                            </tr>
+                            <tr class="alumni-row">
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>Electrical Eng.</td>
+                                <td>Yes</td>
+                                <td>2019</td>
+                                <td>Global Circuits Ltd.</td>
+                                <td>Full-time</td>
+                            </tr>
+                            <tr class="alumni-row">
+                                <td>3</td>
+                                <td>Alex M.</td>
+                                <td>Business Admin.</td>
+                                <td>No</td>
+                                <td>2020</td>
+                                <td>(Student)</td>
+                                <td>Intern</td>
+                            </tr>
+                            <tr class="alumni-row">
+                                <td>4</td>
+                                <td>Emily White</td>
+                                <td>Mechanical Eng.</td>
+                                <td>Yes</td>
+                                <td>2017</td>
+                                <td>Auto Robotics Co.</td>
+                                <td>Contract</td>
+                            </tr>
+                            <tr class="alumni-row">
+                                <td>5</td>
+                                <td>Chris Brown</td>
+                                <td>Civil Eng.</td>
+                                <td>Yes</td>
+                                <td>2016</td>
+                                <td>Urban Builders LLC</td>
+                                <td>Full-time</td>
+                            </tr>
+                            <tr class="alumni-row">
+                                <td>6</td>
+                                <td>Sarah Green</td>
+                                <td>Architecture</td>
+                                <td>No</td>
+                                <td>2021</td>
+                                <td>(Unemployed)</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <aside class="alumni-details-sidebar">
+                <div class="sidebar-card card">
+                    <div class="alumni-profile-header">
+                        <img src="https://avatar.iran.liara.run/public/13" alt="Alumni Profile" class="alumni-detail-img">
+                        <h3>John Doe</h3>
+                        <p class="alumni-meta-info">CS '18 | Tech Innovators Inc.</p>
+                    </div>
+                    <div class="brief-details">
+                        <h4>Brief Details:</h4>
+                        <ul>
+                            <li><strong>Branch:</strong> Computer Science</li>
+                            <li><strong>Batch:</strong> 2018</li>
+                            <li><strong>Current Company:</strong> Tech Innovators Inc.</li>
+                            <li><strong>Position:</strong> Software Engineer</li>
+                            <li><strong>Location:</strong> San Francisco, CA</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="card-link">View Full Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>

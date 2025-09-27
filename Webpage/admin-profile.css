@@ -1,0 +1,40 @@
+/* admin-profile.css - Specific styling for Admin */
+@import url('base-profile.css');
+
+:root {
+    --profile-primary-color: #dc3545; /* Red for importance/caution */
+    --profile-secondary-color: #c82333; /* Darker red */
+    --profile-accent-color: #ffb3ba;   /* Lighter red accent */
+}
+
+/* Admin specific intro card enhancements */
+.admin-intro-card .intro-profile-pic {
+    border-color: var(--profile-primary-color);
+}
+.admin-intro-card .intro-name {
+    color: var(--profile-primary-color);
+    text-transform: uppercase;
+}
+.admin-intro-card .intro-tagline {
+    font-weight: 700;
+    color: var(--profile-secondary-color);
+}
+
+/* Admin specific list item styling */
+.admin-list-item {
+    background-color: #fdf2f3; /* Light red background */
+    border-color: #f5c6cb;
+    color: var(--profile-secondary-color);
+}
+.admin-list-item i {
+    color: var(--profile-primary-color);
+}
+
+/* Admin specific action buttons */
+.admin-intro-card .action-btn-primary {
+    background: linear-gradient(45deg, var(--profile-primary-color), var(--profile-secondary-color));
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+}
+.admin-intro-card .action-btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.5);
+}

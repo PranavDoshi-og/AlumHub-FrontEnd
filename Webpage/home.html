@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern College Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="portal-wrapper">
+        <header class="main-navbar">
+            <div class="navbar-left">
+                <button class="menu-toggle-btn"><i class="fas fa-bars"></i></button>
+                <div class="nav-brand">AlumHub</div>
+                <nav class="main-nav-links">
+                    <a href="home.html" class="nav-link active">Home</a>
+                    <a href="alumni-page.html" class="nav-link">Alumni</a>
+                    <a href="private-messaging.html" class="nav-link">Messaging</a>
+                </nav>
+            </div>
+            <div class="navbar-right">
+                <div class="search-container">
+                    <input type="text" placeholder="Global Search..." class="global-search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <a href="#" class="icon-button notification-bell"><i class="fas fa-bell"></i></a> 
+                <a href="student-profile.html" id="userProfileLink" class="icon-button profile-icon-link">
+                     <img src="https://avatar.iran.liara.run/public/36" alt="User Profile" class="navbar-profile-img">
+                </a>
+            </div>
+        </header>
+
+        <main class="dashboard-layout">
+            <aside class="sidebar-left dashboard-sidebar">
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-item active"><i class="fas fa-chart-line"></i> Dashboard</a>
+                    <a href="job-board.html" class="sidebar-item"><i class="fas fa-briefcase"></i> Job Board</a>
+                    <a href="#" class="sidebar-item"><i class="fas fa-calendar-alt"></i> Events</a>
+                </nav>
+                <div class="sidebar-footer">
+                    <a href="#" class="sidebar-item"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="#" class="sidebar-item logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </aside>
+
+            <section class="dashboard-content">
+                <div class="hero-welcome-card">
+                    <div class="hero-background-video">
+                        <video autoplay loop muted playsinline src="campus-life-bg.mp4"></video>
+                        <div class="video-overlay"></div>
+                    </div>
+                    <div class="hero-content">
+                        <h1 class="welcome-heading">Good Morning, <span class="user-name">Lilian Simon</span>!</h1>
+                        <p class="welcome-message">Ready to make today productive? Your personalized dashboard awaits.</p>
+                        <div class="announcement-marquee">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>New internship opportunities just posted! Check the Job Board for details.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card pulse-card">
+                        <h3><i class="fas fa-newspaper icon-pulse"></i> Pulse of the Campus</h3>
+                        <div class="feed-item">
+                            <p><strong>Dr. Sarah Lee</strong> published new research on sustainable energy. <span class="feed-timestamp">2h ago</span></p>
+                            <span class="feed-category">#Research #Alumni</span>
+                        </div>
+                        <div class="feed-item">
+                            <p><strong>Student Union</strong> hosting "InnovateFest 2024" this Friday! <span class="feed-timestamp">1d ago</span></p>
+                            <span class="feed-category">#Events #Students</span>
+                        </div>
+                        <a href="#" class="card-link">View All News <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="dashboard-card community-card">
+                        <h3><i class="fas fa-comments icon-community"></i> Community Board</h3>
+                        <div class="community-post-item">
+                            <p><strong>New post:</strong> "Tips for your first startup funding round?" by Alex M. <span class="post-timestamp">3h ago</span></p>
+                            <span class="post-tags">#Entrepreneurship #Funding</span>
+                        </div>
+                        <div class="community-post-item">
+                            <p><strong>Thread:</strong> "Best resources for learning Quantum Computing?" <span class="post-timestamp">8h ago</span></p>
+                            <span class="post-tags">#Tech #Learning</span>
+                        </div>
+                        <button class="card-action-btn">Ask a Question</button>
+                        <a href="#" class="card-link">View All Discussions <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="dashboard-card spotlight-card">
+                        <h3><i class="fas fa-star icon-spotlight"></i> Spotlight Gallery</h3>
+                        <div class="spotlight-carousel">
+                            <div class="carousel-item active">
+                                <img src="alumni-spotlight-1.jpg" alt="Alumni Spotlight" class="spotlight-img">
+                                <div class="spotlight-info">
+                                    <h4>Dr. Jane Doe '05</h4>
+                                    <p>"Innovation is seeing what everybody has seen and thinking what nobody has thought."</p>
+                                    <button class="card-action-btn">View Profile</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="student-project-1.jpg" alt="Student Project" class="spotlight-img">
+                                <div class="spotlight-info">
+                                    <h4>Student Project: Eco-Drone</h4>
+                                    <p>"Revolutionizing environmental monitoring with autonomous drone technology."</p>
+                                    <button class="card-action-btn">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-nav">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card event-card">
+                        <h3><i class="fas fa-calendar-days icon-event"></i> Event Horizon</h3>
+                        <div class="event-calendar-view">
+                            <div class="calendar-header">
+                                <span class="month-year">December 2023</span>
+                                <div class="calendar-nav-buttons">
+                                    <i class="fas fa-chevron-left"></i>
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div class="calendar-grid">
+                                <div class="day-label">Mo</div><div class="day-label">Tu</div><div class="day-label">We</div><div class="day-label">Th</div><div class="day-label">Fr</div><div class="day-label">Sa</div><div class="day-label">Su</div>
+                                <span class="day empty"></span><span class="day empty"></span><span class="day empty"></span>
+                                <span class="day">1</span><span class="day">2</span><span class="day">3</span><span class="day">4</span><span class="day">5</span><span class="day has-event">6</span><span class="day">7</span>
+                                <span class="day">8</span><span class="day">9</span><span class="day">10</span><span class="day">11</span><span class="day">12</span><span class="day">13</span><span class="day current-day has-event">14</span>
+                                <span class="day has-event">15</span><span class="day">16</span><span class="day">17</span><span class="day">18</span><span class="day">19</span><span class="day has-event">20</span><span class="day">21</span>
+                                <span class="day">22</span><span class="day">23</span><span class="day">24</span><span class="day">25</span><span class="day">26</span><span class="day">27</span><span class="day">28</span>
+                                <span class="day">29</span><span class="day">30</span><span class="day">31</span>
+                            </div>
+                        </div>
+                        <a href="#" class="card-link">Full Calendar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Placeholder for carousel functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const carouselItems = document.querySelectorAll('.spotlight-carousel .carousel-item');
+            const carouselDots = document.querySelectorAll('.carousel-nav .dot');
+            let currentIndex = 0;
+
+            function showCarouselItem(index) {
+                carouselItems.forEach((item, i) => {
+                    item.classList.remove('active');
+                    carouselDots[i].classList.remove('active');
+                });
+                carouselItems[index].classList.add('active');
+                carouselDots[index].classList.add('active');
+            }
+
+            carouselDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    showCarouselItem(currentIndex);
+                });
+            });
+
+            // Auto-advance carousel
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % carouselItems.length;
+                showCarouselItem(currentIndex);
+            }, 5000); // Change item every 5 seconds
+        });
+    </script>
+</body>
+</html>

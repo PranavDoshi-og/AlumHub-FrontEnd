@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Messaging - CollegeXConnect</title>
+    <link rel="icon" href="/path/to/your/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="private-messaging.css">
+</head>
+<body>
+    <div class="portal-wrapper">
+        <nav class="main-navbar">
+            <div class="navbar-left">
+                <button class="menu-toggle-btn"><i class="material-icons">menu</i></button>
+                <div class="nav-brand">AlumHub</div>
+                <div class="main-nav-links">
+                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="alumni-page.html" class="nav-link ">Alumni</a>
+                    <a href="private-messaging.html" class="nav-link active">Messaging</a>
+                </div>
+            </div>
+            <div class="navbar-right">
+                <div class="search-container">
+                    <i class="material-icons search-icon">search</i>
+                    <input type="text" placeholder="Search..." class="global-search-input">
+                </div>
+                <button class="icon-button"><i class="material-icons">notifications</i></button>
+                <button class="icon-button user-profile-btn">
+                    <img src="https://avatar.iran.liara.run/public/17" alt="Your Profile" class="navbar-profile-img">
+                </button>
+            </div>
+        </nav>
+
+        <div class="messaging-layout">
+            <aside class="message-sidebar">
+                <div class="sidebar-header">
+                    <h3>Conversations</h3>
+                    <button class="icon-button new-chat-btn"><i class="material-icons">add_comment</i></button>
+                </div>
+                <div class="search-contacts">
+                    <i class="material-icons search-icon">search</i>
+                    <input type="text" placeholder="Search contacts..." class="contact-search-input">
+                </div>
+                <div class="contact-list">
+                    <div class="contact-item active">
+                        <div class="contact-avatar">
+                            <img src="https://avatar.iran.liara.run/public/13" alt="John Doe">
+                            <span class="status-indicator online"></span>
+                        </div>
+                        <div class="contact-info">
+                            <h4>John Doe</h4>
+                            <p class="last-message">Hey, are you free for a call?</p>
+                        </div>
+                        <div class="contact-meta">
+                            <span class="message-time">10:30 AM</span>
+                            <span class="unread-count">3</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-avatar">
+                            <img src="https://avatar.iran.liara.run/public/55" alt="Alice Johnson">
+                            <span class="status-indicator offline"></span>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Alice Johnson</h4>
+                            <p class="last-message">I've sent the project details.</p>
+                        </div>
+                        <div class="contact-meta">
+                            <span class="message-time">Yesterday</span>
+                        </div>
+                    </div>
+                    <div class="contact-item unread">
+                        <div class="contact-avatar">
+                            <img src="https://avatar.iran.liara.run/public/49" alt="Robert Peterson">
+                            <span class="status-indicator online"></span>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Robert Peterson</h4>
+                            <p class="last-message">New event details posted!</p>
+                        </div>
+                        <div class="contact-meta">
+                            <span class="message-time">8:15 AM</span>
+                            <span class="unread-count">1</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-avatar">
+                            <img src="https://avatar.iran.liara.run/public/81" alt="Emily Scott">
+                            <span class="status-indicator away"></span>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Emily Scott</h4>
+                            <p class="last-message">Sounds good! Catch you later.</p>
+                        </div>
+                        <div class="contact-meta">
+                            <span class="message-time">Mon</span>
+                        </div>
+                    </div>
+                    </div>
+            </aside>
+
+            <main class="chat-area">
+                <div class="chat-header">
+                    <div class="chat-header-info">
+                        <div class="contact-avatar">
+                            <img src="https://avatar.iran.liara.run/public/13" alt="John Doe">
+                            <span class="status-indicator online"></span>
+                        </div>
+                        <h4>John Doe</h4>
+                        <span class="chat-status">Online</span>
+                    </div>
+                    <div class="chat-header-actions">
+                        <button class="icon-button"><i class="material-icons">videocam</i></button>
+                        <button class="icon-button"><i class="material-icons">call</i></button>
+                        <button class="icon-button"><i class="material-icons">more_vert</i></button>
+                    </div>
+                </div>
+
+                <div class="message-list">
+                    <div class="message sent">
+                        <div class="message-bubble">
+                            Hi John, how are you? Just checking in about the alumni mentorship program.
+                        </div>
+                        <span class="message-timestamp">10:28 AM</span>
+                        <div class="message-avatar sender-avatar"> <img src="https://avatar.iran.liara.run/public/17" alt="You">
+                        </div>
+                    </div>
+
+                    <div class="message received">
+                        <div class="message-avatar">
+                            <img src="https://avatar.iran.liara.run/public/13" alt="John Doe">
+                        </div>
+                        <div class="message-content">
+                            <div class="message-bubble">
+                                Hey! I'm doing great, thanks for asking! Yes, I'm definitely interested in discussing the mentorship program. What did you have in mind?
+                            </div>
+                            <span class="message-timestamp">10:30 AM</span>
+                        </div>
+                    </div>
+
+                    <div class="message sent">
+                        <div class="message-bubble">
+                            Great! I was thinking we could set up a quick virtual coffee chat next week to brainstorm some ideas and structure. Does that sound good?
+                        </div>
+                        <span class="message-timestamp">10:32 AM</span>
+                        <div class="message-avatar sender-avatar">
+                            <img src="https://avatar.iran.liara.run/public/17" alt="You">
+                        </div>
+                    </div>
+
+                    <div class="message received">
+                        <div class="message-avatar">
+                            <img src="https://avatar.iran.liara.run/public/13" alt="John Doe">
+                        </div>
+                        <div class="message-content">
+                            <div class="message-bubble">
+                                A virtual coffee chat sounds perfect! I'm free on Tuesday or Thursday afternoon. Let me know what works for you.
+                            </div>
+                            <span class="message-timestamp">10:35 AM</span>
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="message-input-area">
+                    <button class="icon-button attachment-btn"><i class="material-icons">attach_file</i></button>
+                    <textarea placeholder="Type your message..." class="message-input" rows="1"></textarea>
+                    <button class="icon-button send-btn"><i class="material-icons">send</i></button>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="private-messaging.js"></script>
+</body>
+</html>
