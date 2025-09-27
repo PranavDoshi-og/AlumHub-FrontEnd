@@ -8,12 +8,12 @@
     --accent-color-orange: #FF9800;     /* Warm orange for focus/announcements */
     --accent-color-purple: #9C27B0;     /* Rich purple for community */
 
-    --text-dark: #263238;               /* Very dark charcoal grey for headings */
-    --text-medium: #455A64;             /* Medium grey for body text */
-    --text-light: #ffffff;              /* White for light backgrounds/contrast */
-    --bg-light: #eceff1;                /* A soft, very light grey background */
-    --card-bg-color: #ffffff;           /* Pure white for cards */
-    --border-color-light: #cfd8dc;      /* Light grey for subtle borders */
+    --text-dark: #263238;                /* Very dark charcoal grey for headings */
+    --text-medium: #455A64;              /* Medium grey for body text */
+    --text-light: #ffffff;               /* White for light backgrounds/contrast */
+    --bg-light: #eceff1;                 /* A soft, very light grey background */
+    --card-bg-color: #ffffff;            /* Pure white for cards */
+    --border-color-light: #cfd8dc;       /* Light grey for subtle borders */
     --shadow-base: rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
     --shadow-medium: rgba(0, 0, 0, 0.12); /* Slightly deeper shadow on hover */
 
@@ -144,6 +144,7 @@ body {
     transition: all 0.3s ease;
     background-color: var(--bg-light);
     color: var(--text-dark);
+    box-sizing: border-box; /* Added for consistency */
 }
 .global-search-input::placeholder {
     color: var(--text-medium);
@@ -163,6 +164,7 @@ body {
     left: 15px;
     color: var(--text-medium);
     font-size: 0.9em;
+    pointer-events: none; /* Make icon unclickable */
 }
 
 .icon-button {
@@ -205,11 +207,8 @@ body {
 .messaging-layout {
     display: flex;
     flex-grow: 1;
-    /* Removed max-width and margin: auto */
-    /* Removed border-radius and box-shadow from here, move to individual panels if desired for "floating" effect */
     overflow: hidden; /* Ensures contained elements behave correctly */
     background-color: var(--card-bg-color); /* Overall background for the messaging module */
-    /* Calculate height to fill remaining space */
     height: calc(100vh - 78px); /* Full height after navbar (adjust 78px if navbar height changes) */
     box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Subtle overall shadow for the main messaging container */
 }
@@ -231,6 +230,7 @@ body {
     align-items: center;
     padding: 20px 25px;
     border-bottom: 1px solid var(--border-color-light);
+    flex-shrink: 0; /* Prevent from shrinking */
 }
 
 .sidebar-header h3 {
@@ -254,16 +254,21 @@ body {
     position: relative;
     padding: 15px 25px;
     border-bottom: 1px solid var(--border-color-light);
+    flex-shrink: 0; /* Prevent from shrinking */
+    display: flex; /* Use flex to contain input and icon properly */
+    align-items: center;
 }
 
 .contact-search-input {
-    width: 100%;
+    width: 100%; /* Crucial: Make the input take 100% of its parent's available width */
     padding: 10px 15px 10px 40px;
     border: 1px solid var(--border-color-light);
     border-radius: 25px;
     background-color: var(--bg-light);
     font-size: 0.95em;
     color: var(--text-dark);
+    box-sizing: border-box; /* IMPORTANT: Include padding and border in the element's total width */
+    transition: all 0.2s ease;
 }
 .contact-search-input::placeholder {
     color: var(--text-medium);
@@ -276,9 +281,13 @@ body {
     background-color: var(--card-bg-color);
 }
 .search-contacts .search-icon {
-    left: 40px; /* Adjust icon position within input */
+    position: absolute;
+    left: 40px; /* Adjust icon position relative to padding */
     top: 50%;
     transform: translateY(-50%);
+    color: var(--text-medium);
+    pointer-events: none; /* Make icon unclickable */
+    font-size: 1em; /* Ensure icon size is consistent */
 }
 
 .contact-list {
@@ -561,6 +570,7 @@ body {
     color: var(--text-dark);
     background-color: var(--bg-light);
     transition: all 0.2s ease;
+    box-sizing: border-box; /* Added for message input too */
 }
 .message-input::placeholder {
     color: var(--text-medium);
@@ -711,7 +721,6 @@ body {
     .message-avatar img {
         width: 30px; /* Adjust message avatar size for smaller screens */
         height: 30px;
-        border-radius: 50%; /* Ensure circular */
     }
     .message-timestamp {
         font-size: 0.7em;
@@ -763,7 +772,6 @@ body {
     .contact-avatar img {
         width: 35px;
         height: 35px;
-        border-radius: 50%; /* Ensure circular */
     }
     .contact-info h4 {
         font-size: 0.95em;
@@ -796,7 +804,6 @@ body {
     .message-avatar img {
         width: 25px; /* Adjust message avatar size for very small screens */
         height: 25px;
-        border-radius: 50%; /* Ensure circular */
     }
     .message-timestamp {
         font-size: 0.65em;
