@@ -1,0 +1,368 @@
+/* General Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Light grey background for the whole page */
+    overflow: hidden; /* Prevent body scrolling */
+}
+
+/* Split Screen Container */
+.split-screen-container {
+    display: flex;
+    width: 900px; /* Adjust total width as needed */
+    max-width: 95%; /* Responsive width */
+    min-height: 580px; /* Adjusted height to accommodate user type buttons */
+    max-height: 95vh; /* Responsive height */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensures rounded corners are visible and hides overflowing forms */
+    position: relative;
+}
+
+/* Left Pane: Static content inviting to Sign Up */
+.left-pane {
+    flex: 1; /* Takes up half the space */
+    background: linear-gradient(135deg, #2ecc71, #27ae60); /* Green gradient */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes logo to top, content to middle, shape to bottom */
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Ensures it's above the shapes */
+}
+
+.left-pane .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    gap: 10px;
+    align-self: flex-start;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-start; /* Align logo to top-left */
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px; /* Space below logo */
+}
+
+.left-pane .logo img {
+    border-radius: 5px; /* If your logo needs rounded corners */
+}
+
+.left-pane .pane-content {
+    flex-grow: 1; /* Allows content to take available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center;
+    padding: 20px 0;
+}
+
+.left-pane h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.left-pane p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Right Pane: Dynamic Login Forms */
+.right-pane {
+    flex: 1; /* Takes up half the space */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.right-pane-content {
+    max-width: 350px; /* Limit form width */
+    width: 100%;
+    text-align: center;
+    position: relative; /* Needed for absolute positioning of shapes */
+}
+
+.right-pane h2 {
+    color: #2ecc71; /* Green heading color */
+    font-size: 2em;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* User Type Selector Buttons */
+.user-type-selector {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.user-type-selector .type-button {
+    flex: 1;
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    color: #666;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+.user-type-selector .type-button:hover {
+    border-color: #2ecc71;
+    color: #2ecc71;
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.2);
+}
+
+.user-type-selector .type-button.active {
+    background-color: #2ecc71;
+    color: #fff;
+    border-color: #2ecc71;
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.4);
+    transform: translateY(-2px);
+}
+
+/* "or use your email" separator */
+.or-separator {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    position: relative;
+}
+.or-separator::before { left: 0; }
+.or-separator::after { right: 0; }
+
+/* Forms Carousel Styling */
+.form-carousel-container {
+    width: 100%;
+    overflow: hidden; /* Crucial for hiding forms that are not active */
+}
+
+.form-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+}
+
+.login-form-type {
+    min-width: 100%; /* Each form takes full width of the carousel container */
+    box-sizing: border-box; /* Include padding in width */
+    padding: 0 5px; /* Slight horizontal padding for forms */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form-type h3 {
+    color: #555;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Input Groups (Icons and Fields) */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd; /* Underline style */
+    padding-bottom: 8px; /* Space for the underline */
+    width: 100%; /* Ensure input groups take full width */
+    max-width: 300px; /* Limit input width */
+}
+
+.input-group i {
+    color: #aaa;
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+
+.input-group input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 1em;
+    color: #333;
+    background-color: transparent; /* Ensure input background is transparent */
+}
+
+.input-group input::placeholder {
+    color: #bbb;
+}
+
+.input-group input:focus + i { /* Color icon on focus */
+    color: #2ecc71;
+}
+
+.forgot-password {
+    color: #888;
+    font-size: 0.85em;
+    text-decoration: none;
+    margin-top: -10px; /* Pull it slightly up */
+    display: block; /* Make it a block to apply text-align */
+    text-align: right; /* Align to the right */
+    width: 100%;
+    max-width: 300px; /* Match input width */
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #2ecc71;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.ghost-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ghost-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filled-button {
+    background-color: #2ecc71; /* Green color */
+    color: #fff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 8px 15px rgba(46, 204, 113, 0.3); /* Soft shadow */
+    width: 100%; /* Make button full width of form */
+    max-width: 300px; /* Limit button width */
+}
+
+.filled-button:hover {
+    background-color: #27ae60; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(46, 204, 113, 0.4);
+}
+
+/* Decorative Shapes */
+.bottom-shape {
+    position: absolute;
+    bottom: -50px; /* Adjust to move it out of the visible area */
+    left: -50px; /* Adjust */
+    width: 150px;
+    height: 150px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    opacity: 0.6;
+    z-index: 0;
+    animation: rotateShape 10s linear infinite;
+}
+
+.yellow-shape {
+    background-color: #f1c40f; /* Yellow color */
+}
+
+.top-shape {
+    position: absolute;
+    top: -50px; /* Adjust to move it out of the visible area */
+    right: -50px; /* Adjust */
+    width: 120px;
+    height: 120px;
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    opacity: 0.6;
+    z-index: 0;
+    animation: rotateShape 8s linear infinite reverse;
+}
+
+.red-shape {
+    background-color: #e74c3c; /* Red color */
+}
+
+@keyframes rotateShape {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .split-screen-container {
+        flex-direction: column; /* Stack panes vertically on smaller screens */
+        width: 90%;
+        min-height: 100vh; /* Allow full height on mobile */
+        max-height: unset; /* Remove max-height constraint */
+        border-radius: 0; /* No rounded corners on full-height mobile view */
+        box-shadow: none;
+    }
+
+    .left-pane, .right-pane {
+        flex: none; /* Remove flex grow */
+        width: 100%; /* Take full width */
+        padding: 20px;
+    }
+
+    .left-pane {
+        min-height: 200px; /* Minimum height for the welcome section */
+        justify-content: center; /* Center content vertically */
+    }
+
+    .left-pane .logo {
+        align-self: center; /* Center logo on mobile */
+        margin-bottom: 10px;
+    }
+
+    .left-pane .pane-content {
+        padding: 10px 0;
+    }
+
+    .left-pane h2 {
+        font-size: 2em;
+    }
+
+    .left-pane p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+
+    .right-pane {
+        min-height: 450px; /* Minimum height for the form section */
+        justify-content: flex-start; /* Align form content to top */
+        padding-top: 50px; /* Add some space from the top */
+    }
+
+    .bottom-shape, .top-shape {
+        display: none; /* Hide decorative shapes on mobile for simplicity */
+    }
+}

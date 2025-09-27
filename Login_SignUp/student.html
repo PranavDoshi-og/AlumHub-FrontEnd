@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sign Up</title>
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h2 id="signup-title">Student Sign Up</h2>
+        
+        <form id="student-form" class="signup-form">
+            <label for="student-name">Full Name as per Worksheet:</label>
+            <input type="text" id="student-name" name="name" required>
+            <label for="student-prn">PRN Number:</label>
+            <input type="text" id="student-prn" name="prn" required>
+            <label for="student-batch">Batch:</label>
+            <input type="text" id="student-batch" name="batch" required>
+            <label for="student-department">Department:</label>
+            <input type="text" id="student-department" name="department" required>
+            <label for="student-contact">Contact Details:</label>
+            <input type="text" id="student-contact" name="contact" required>
+            <label for="student-id">Student ID:</label>
+            <input type="text" id="student-id" name="id" required>
+            <label for="student-email">Email:</label>
+            <input type="email" id="student-email" name="email" required>
+            <label for="student-password">Create Password:</label>
+            <input type="password" id="student-password" name="password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <p class="login-link switch-link">Not a Student? <a href="signup-selection.html">Switch Account Type</a></p>
+    </div>
+    <script src="signup-form-logic.js"></script>
+</body>
+</html>

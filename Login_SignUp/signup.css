@@ -1,0 +1,291 @@
+/* General Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+.split-screen-container {
+    display: flex;
+    width: 900px;
+    max-width: 95%;
+    min-height: 580px;
+    max-height: 95vh;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+.left-pane {
+    flex: 1;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.left-pane .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-start;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.left-pane .logo img {
+    border-radius: 5px;
+}
+.left-pane .pane-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.left-pane h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.left-pane p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.right-pane {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+.right-pane-content {
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.right-pane h2 {
+    color: #2ecc71;
+    font-size: 2em;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+.user-type-selector {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+.user-type-selector .type-button {
+    flex: 1;
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    color: #666;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.user-type-selector .type-button:hover {
+    border-color: #2ecc71;
+    color: #2ecc71;
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.2);
+}
+.user-type-selector .type-button.active {
+    background-color: #2ecc71;
+    color: #fff;
+    border-color: #2ecc71;
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.4);
+    transform: translateY(-2px);
+}
+.or-separator {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    position: relative;
+}
+.or-separator::before { left: 0; }
+.or-separator::after { right: 0; }
+.form-carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+.form-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.signup-form-type {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signup-form-type h3 {
+    color: #555;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    width: 100%;
+    max-width: 300px;
+}
+.input-group i {
+    color: #aaa;
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+.input-group input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 1em;
+    color: #333;
+    background-color: transparent;
+}
+.input-group input::placeholder {
+    color: #bbb;
+}
+.input-group input:focus + i {
+    color: #2ecc71;
+}
+.ghost-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.ghost-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.filled-button {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 8px 15px rgba(46, 204, 113, 0.3);
+    width: 100%;
+    max-width: 300px;
+}
+.filled-button:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(46, 204, 113, 0.4);
+}
+.bottom-shape {
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    opacity: 0.6;
+    z-index: 0;
+    animation: rotateShape 10s linear infinite;
+}
+.yellow-shape {
+    background-color: #f1c40f;
+}
+.top-shape {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 120px;
+    height: 120px;
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    opacity: 0.6;
+    z-index: 0;
+    animation: rotateShape 8s linear infinite reverse;
+}
+.red-shape {
+    background-color: #e74c3c;
+}
+@keyframes rotateShape {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@media (max-width: 768px) {
+    .split-screen-container {
+        flex-direction: column;
+        width: 90%;
+        min-height: 100vh;
+        max-height: unset;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .left-pane, .right-pane {
+        flex: none;
+        width: 100%;
+        padding: 20px;
+    }
+    .left-pane {
+        min-height: 200px;
+        justify-content: center;
+    }
+    .left-pane .logo {
+        align-self: center;
+        margin-bottom: 10px;
+    }
+    .left-pane .pane-content {
+        padding: 10px 0;
+    }
+    .left-pane h2 {
+        font-size: 2em;
+    }
+    .left-pane p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+    .right-pane {
+        min-height: 450px;
+        justify-content: flex-start;
+        padding-top: 50px;
+    }
+    .bottom-shape, .top-shape {
+        display: none;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Login Portal</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="split-screen-container">
+        <div class="left-pane green-bg">
+            <div class="logo">
+                <img src="logo.jpg" alt="College Logo" style="height: 40px;">
+                <span>College Portal</span>
+            </div>
+            <div class="pane-content">
+                <h2>Hello, Friend!</h2>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost-button" id="signUpRedirectButton">SIGN UP</button>
+            </div>
+            <div class="bottom-shape yellow-shape"></div>
+        </div>
+
+        <div class="right-pane white-bg">
+            <div class="right-pane-content">
+                <div class="top-shape red-shape"></div>
+                
+                <h2>Sign In</h2>
+                
+                <div class="user-type-selector">
+                    <button class="type-button active" data-target="alumni-login-form">Alumni</button>
+                    <button class="type-button" data-target="student-login-form">Student</button>
+                    <button class="type-button" data-target="admin-login-form">Administrator</button>
+                </div>
+                
+                <p class="or-separator">or use your email for login:</p>
+
+                <div class="form-carousel-container">
+                    <div class="form-carousel">
+                        <form id="alumni-login-form" class="auth-form login-form-type">
+                            <h3>Alumni Login</h3>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" placeholder="Email / Alumni ID" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Password" required>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                            <button type="submit" class="filled-button green-button">LOG IN</button>
+                        </form>
+
+                        <form id="student-login-form" class="auth-form login-form-type">
+                            <h3>Student Login</h3>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" placeholder="Email / PRN Number" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Password" required>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                            <button type="submit" class="filled-button green-button">LOG IN</button>
+                        </form>
+
+                        <form id="admin-login-form" class="auth-form login-form-type">
+                            <h3>Administrator Login</h3>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" placeholder="Email / Admin ID" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Password" required>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                            <button type="submit" class="filled-button green-button">LOG IN</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

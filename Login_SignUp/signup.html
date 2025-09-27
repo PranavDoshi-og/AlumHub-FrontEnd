@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="split-screen-container">
+        <div class="left-pane green-bg">
+            <div class="logo">
+                <img src="logo.jpg" alt="College Logo" style="height: 40px;">
+                <span>College Portal</span>
+            </div>
+            <div class="pane-content">
+                <h2>Welcome Back!</h2>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost-button" id="signInRedirectButton">SIGN IN</button>
+            </div>
+            <div class="bottom-shape yellow-shape"></div>
+        </div>
+
+        <div class="right-pane white-bg">
+            <div class="right-pane-content">
+                <div class="top-shape red-shape"></div>
+                
+                <h2>Create Account</h2>
+                
+                <div class="user-type-selector">
+                    <button class="type-button active" data-target="alumni-signup-form">Alumni</button>
+                    <button class="type-button" data-target="student-signup-form">Student</button>
+                    <button class="type-button" data-target="admin-signup-form">Administrator</button>
+                </div>
+                
+                <p class="or-separator">or use your email for registration:</p>
+
+                <div class="form-carousel-container">
+                    <div class="form-carousel">
+                        <form id="alumni-signup-form" class="auth-form signup-form-type">
+                            <h3>Alumni Sign Up</h3>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Full Name" name="name" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-id-card"></i>
+                                <input type="text" placeholder="PRN Number" name="prn" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" placeholder="Contact Number" name="contactNumber" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" placeholder="Email" name="email" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Password" name="password" required>
+                            </div>
+                            <button type="submit" class="filled-button green-button">SIGN UP</button>
+                        </form>
+
+                        <form id="student-signup-form" class="auth-form signup-form-type">
+                            <h3>Student Sign Up</h3>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Full Name" name="name" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-id-card"></i>
+                                <input type="text" placeholder="PRN Number" name="prn" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" placeholder="Contact Number" name="contactNumber" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" placeholder="Email" name="email" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Password" name="password" required>
+                            </div>
+                            <button type="submit" class="filled-button green-button">SIGN UP</button>
+                        </form>
+
+                        <form id="admin-signup-form" class="auth-form signup-form-type">
+                            <h3>Administrator Sign Up</h3>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Full Name" name="name" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-building"></i>
+                                <input type="text" placeholder="College Name" name="collegeName" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-code"></i>
+                                <input type="text" placeholder="College Code" name="collegeCode" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" placeholder="College Email" name="collegeEmail" required>
+                            </div>
+                            <button type="submit" class="filled-button green-button">SIGN UP</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>

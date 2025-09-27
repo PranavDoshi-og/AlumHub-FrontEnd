@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Sign Up</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h2 id="signup-title">Administrator Sign Up</h2>
+        
+        <form id="administration-form" class="signup-form">
+            <label for="admin-name">Full Name:</label>
+            <input type="text" id="admin-name" name="name" required>
+            <label for="admin-college-name">College Name:</label>
+            <input type="text" id="admin-college-name" name="collegeName" required>
+            <label for="admin-college-code">College Code:</label>
+            <input type="text" id="admin-college-code" name="collegeCode" required>
+            <label for="admin-department">Department:</label>
+            <input type="text" id="admin-department" name="department" required>
+            <label for="admin-contact">Contact Details:</label>
+            <input type="text" id="admin-contact" name="contact" required>
+            <label for="admin-id">Admin ID:</label>
+            <input type="text" id="admin-id" name="id" required>
+            <label for="admin-email">Email:</label>
+            <input type="email" id="admin-email" name="email" required>
+            <label for="admin-password">Create Password:</label>
+            <input type="password" id="admin-password" name="password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <p class="login-link switch-link">Not an Administrator? <a href="signup-selection.html">Switch Account Type</a></p>
+    </div>
+    <script src="signup-form-logic.js"></script>
+</body>
+</html>
